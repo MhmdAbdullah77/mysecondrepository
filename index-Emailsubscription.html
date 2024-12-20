@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index-Emailsubscription.css">
+    <script src="index-Emailsubscription.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hero">
+        <h3>Coming Soon!</h3>
+        <h1>Our Brand New Website <br> Is On Its's Way</h1>
+        <p>Subscribe for more details.</p>
+        <form name="submit-to-google-sheet">
+            <input type="eamil" name="Email" placeholder="Your Email ID" required>
+            <button type="submit"><img src="https://cdn-icons-png.flaticon.com/128/18542/18542191.png" width="50px"></button>
+        </form>
+        <span id="msg"></span>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz7p8dpZdrf7hN3u6Ik-jQQGQxQP6b3TXhr-fN9uNfZn_vz6grCE_rsDAEBgc4elmgC7A/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.querySelector('#msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = 'Thank You For Subscribing!'
+                setTimeout(function(){
+                    msg.innerHTML = ''
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
