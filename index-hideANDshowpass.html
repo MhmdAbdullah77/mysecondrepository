@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index-hideANDshowpass.css">
+    <script src="index-hideANDshowpass.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="input-box">
+        <input type="password" class="password" placeholder="password" >
+        <img src="https://cdn-icons-png.flaticon.com/128/8276/8276554.png" class="eyeicon">
+    </div>
+    <script>
+
+
+let eyeicon = document.querySelector('.eyeicon');
+let password = document.querySelector('.password');
+const body = document.body;
+
+
+
+eyeicon.onclick = function(){
+    if(password.type == "password"){
+        password.type == "text"
+        eyeicon.src = "https://cdn-icons-png.flaticon.com/128/3423/3423234.png"
+        }else{
+            password.type == "password"
+            eyeicon.src = "https://cdn-icons-png.flaticon.com/128/8276/8276554.png"
+        }
+}
+    </script>
+</body>
+</html>
