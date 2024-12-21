@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Playfair;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://lh3.googleusercontent.com/proxy/4r_UQNrQp9mRBBPqS0YZBkDlvPwton8RGuopmgXa5wkMKMepC-COOBag0229fmaFpsUXAwYI3qkEGlVyiN8RcvZ9qeiLG5LLZPiJQH0i9anjd10_hDg1O0142qShGZ2EoLchOQg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 8%;
+}
+.logo{
+    /* color: rgba(210, 105, 30, 0.575); */
+    color: #c72d42;
+    width: 120px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.content h1{
+    font-size: 64px;
+    font-weight: 500;
+}
+.content h1 span{
+    color: #c72d42;
+}
+.content button{
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    cursor: pointer;
+}
+.launch-time{
+    display: flex;
+}
+.launch-time div{
+    flex-basis: 100px;
+}
+.launch-time div p{
+    font-size: 60px;
+    margin-bottom: -14px
+}
+.angel{
+    width: 300px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    mix-blend-mode: multiply;
+    animation: angel 4s linear infinite;
+}
+@keyframes angel{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 105%;
+        opacity: 1;
+    }
+}
